@@ -11,13 +11,18 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { listaPendiente } from '../pages/pendientes/pendientes.component';
+import { listaTerminada } from '../pages/terminadas/terminadas.component';
+
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    listaPendiente,
+    listaTerminada
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    listaPendiente,
+    listaTerminada
   ],
   providers: [
     StatusBar,
