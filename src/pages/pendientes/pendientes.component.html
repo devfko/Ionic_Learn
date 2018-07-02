@@ -6,12 +6,29 @@
 
 <ion-content padding>
 
-  <h1>Pendientes!!!</h1>
+  <ion-card *ngFor="let lista of _listaDeseos.listasNombre">
+    <ion-item>
+
+    </ion-item>
+
+    <h2>{{ lista.nombre }}</h2>
+    <ion-list>
+      <ion-item>
+        <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
+        Tetris
+      </ion-item>
+      <ion-item>
+        <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
+        Nintento     
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <!-- <h1>Pendientes!!!</h1>
 
   <ul>
     <li *ngFor="let lista of _listaDeseos.listasNombre">
       {{ lista.nombre }}
     </li>
-  </ul>
+  </ul> -->
 
 </ion-content>

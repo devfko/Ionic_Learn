@@ -9,7 +9,7 @@ export class ListaDeseosService {
   constructor() {
 
     let lista1 = new Lista('Compras');
-    let lista2 = new Lista('Culitos');
+    let lista2 = new Lista('Corticos');
     let lista3 = new Lista('Negocios');
 
     this.listasNombre.push(lista1);
