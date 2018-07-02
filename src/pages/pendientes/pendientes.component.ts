@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'pendientes.component.html',
 })
 export class PendientesComponent implements OnInit {
-  constructor() {  }
+    constructor( ) {
+
+   }
 
   ngOnInit() {}
 }
