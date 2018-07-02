@@ -12,13 +12,19 @@ import { TerminadosComponent } from '../pages/terminados/terminados.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AgregarComponent } from '../pages/agregar/agregar.component';
+
+import { PlaceHolderPipe } from './pipes/placeholder.pipe';
+
 @NgModule({
   declarations: [
     MyApp,
     PendientesComponent,
     TerminadosComponent,
     PendientesComponent,
-    TabsPage
+    TabsPage,
+    AgregarComponent,
+    PlaceHolderPipe
   ],
   imports: [
     IonicModule.forRoot(MyApp), BrowserModule
@@ -29,7 +35,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PendientesComponent,
     TerminadosComponent,
     PendientesComponent,
-    TabsPage
+    TabsPage,
+    AgregarComponent
   ],
   providers: [
     StatusBar,

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Lista de Pendientes</ion-title>
   </ion-navbar>
 </ion-header>
@@ -8,10 +8,9 @@
 
   <ion-card *ngFor="let lista of _listaDeseos.listasNombre">
     <ion-item>
-
+      <h2>{{ lista.nombre }}</h2>
     </ion-item>
 
-    <h2>{{ lista.nombre }}</h2>
     <ion-list>
       <ion-item>
         <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
@@ -19,16 +18,15 @@
       </ion-item>
       <ion-item>
         <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
-        Nintento     
+        Nintento
       </ion-item>
     </ion-list>
   </ion-card>
-  <!-- <h1>Pendientes!!!</h1>
 
-  <ul>
-    <li *ngFor="let lista of _listaDeseos.listasNombre">
-      {{ lista.nombre }}
-    </li>
-  </ul> -->
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="irAgregar()">
+      <ion-icon ios="ios-apps" md="md-apps"></ion-icon>
+    </button>
+  </ion-fab>
 
 </ion-content>
