@@ -1,13 +1,11 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pendiente',
-  templateUrl: 'pendientes.component.html'
+  selector: 'app-pendientes',
+  templateUrl: 'pendientes.component.html',
 })
+export class PendientesComponent implements OnInit {
+  constructor() {  }
 
-export class listaPendiente implements OnInit {
-   constructor(){}
-
-   ngOnInit(){}
-
+  ngOnInit() {}
 }
