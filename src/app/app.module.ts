@@ -9,8 +9,8 @@ import { ListaDeseosService } from './services/lista-deseos.service';
 import { PendientesComponent } from '../pages/pendientes/pendientes.component';
 import { TerminadosComponent } from '../pages/terminados/terminados.component';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+// import { StatusBar } from '@ionic-native/status-bar';
+// import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AgregarComponent } from '../pages/agregar/agregar.component';
 
@@ -39,8 +39,8 @@ import { PlaceHolderPipe } from './pipes/placeholder.pipe';
     AgregarComponent
   ],
   providers: [
-    StatusBar,
-    SplashScreen,
+    // StatusBar,
+    // SplashScreen,
     ListaDeseosService,
     {
       provide: ErrorHandler,
