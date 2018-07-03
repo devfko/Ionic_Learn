@@ -1,11 +1,41 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Terminados</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Lista de Terminados</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <h1>No hay nada que ver...</h1>
+  <ion-grid *ngIf="( _listaDeseos.listasNombre | pendientes:true ).length === 0">
+    <ion-row>
+      <ion-col class="text-center caja-vacia">
+        <ion-icon class="icono-grande" ios="ios-sunny" md="md-sunny"></ion-icon>
+        <p>No existen listas!</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card (click)="verDetalle(lista, i)"
+  *ngFor="let lista of _listaDeseos.listasNombre | pendientes:true; let i = index">
+    <ion-item color="light">
+      <h2>{{ lista.nombre }}</h2>
+      <ion-note item-right>
+        {{ lista.items.length }} items
+      </ion-note>
+    </ion-item>
+
+    <ion-list>
+      <ion-item *ngFor="let item of lista.items | slice:0:limite">
+        <ion-icon *ngIf="!item.completado" ios="ios-square-outline" md="md-square-outline"></ion-icon>
+        <ion-icon *ngIf="item.completado" ios="ios-checkbox-outline" md="md-checkbox-outline"></ion-icon>
+        {{ item.nombre }}
+      </ion-item>
+
+      <ion-item class="text-center" *ngIf="lista.items.length > limite">
+          <ion-icon color="primary" ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
 
 </ion-content>
